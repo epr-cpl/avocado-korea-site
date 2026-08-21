@@ -200,8 +200,8 @@
   }
   .newsletter h3{ font-size:20px; font-weight:700; margin-bottom:6px; }
   .newsletter p{ font-size:14.5px; color:var(--gray-600); }
-  .newsletter form{ display:flex; gap:10px; flex-wrap:wrap; }
-  .newsletter input[type=email]{
+  .newsletter > form{ display:flex; gap:10px; flex-wrap:wrap; }
+  .newsletter > input[type=email]{
     padding:12px 16px; border-radius:8px; border:1px solid var(--gray-300);
     font-size:14px; min-width:220px; font-family:inherit;
   }
@@ -489,6 +489,7 @@
 <meta property="og:description" content="VAT·EPR·CPNP·GPSR 등록부터 통관, 3PL 물류, 마켓 확장까지 — 유럽 진출을 가로막는 장벽을 해결합니다.">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="https://resource.stibee.com/subscribe/stb_subscribe_form_style.css">
 </head>
 <body>
 
@@ -698,10 +699,43 @@
         <h3>EU 컴플라이언스 뉴스레터 구독하기</h3>
         <p>VAT·EPR 등록 절차, 정책 변경 소식을 가장 먼저 받아보세요.</p>
       </div>
-      <form action="https://page.stibee.com/subscriptions/512860" method="get" target="_blank" rel="noopener">
-        <input type="email" placeholder="이메일 주소" required>
-        <button type="submit" class="btn">구독하기</button>
-      </form>
+      <div id="stb_subscribe" style="width:100%; max-width:360px;">
+        <form action="https://stibee.com/api/v1.0/lists/-3LU2IFYAVZIhQWS2gPkEchMm8IEyQ==/public/subscribers" method="POST" target="_blank" accept-charset="utf-8" class="stb_form" name="stb_subscribe_form" id="stb_subscribe_form" data-lang="" novalidate>
+          <fieldset class="stb_form_set">
+            <label for="stb_email" class="stb_form_set_label">
+              이메일 주소<span class="stb_asterisk">*</span>
+            </label>
+            <input type="text" class="stb_form_set_input" id="stb_email" name="email" required="required">
+            <div class="stb_form_msg_error" id="stb_email_error"></div>
+          </fieldset>
+
+          <div class="stb_form_policy">
+            <label>
+              <input type="checkbox" id="stb_policy" value="stb_policy_true">
+              <span>(필수)</span>
+              <button id="stb_form_modal_open" data-modal="stb_form_policy_modal" class="stb_form_modal_open_btn" type="button">개인정보 수집 및 이용</button>에 동의합니다.
+            </label>
+            <div class="stb_form_msg_error" id="stb_policy_error"></div>
+            <div class="stb_form_modal stb_form_policy_text blind" id="stb_form_policy_modal">
+              <div class="stb_form_modal_body">
+                <h1 class="stb_form_modal_title">개인정보 수집 및 이용</h1>
+                <div class="stb_form_modal_text">뉴스레터 발송을 위한 최소한의 개인정보를 수집하고 이용합니다.
+수집된 정보는 발송 외 다른 목적으로 이용되지 않으며, 서비스가 종료되거나 구독을 해지할 경우 즉시 파기됩니다.</div>
+                <div class="stb_form_modal_btn">
+                  <button id="stb_form_modal_close" class="stb_form_modal_close_btn" data-modal="stb_form_policy_modal" type="button">닫기</button>
+                </div>
+              </div>
+              <div class="stb_form_modal_bg" id="stb_form_modal_bg"></div>
+            </div>
+          </div>
+
+          <div class="stb_form_result" id="stb_form_result"></div>
+
+          <fieldset class="stb_form_set_submit">
+            <button type="submit" class="stb_form_submit_button" id="stb_form_submit_button" style="background-color:#2F55E8; color:#FFFFFF;">구독하기</button>
+          </fieldset>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -1850,5 +1884,6 @@ ChannelIO('boot', {
 });
 </script>
 
+<script type="text/javascript" src="https://resource.stibee.com/subscribe/stb_subscribe_form.js"></script>
 </body>
 </html>
