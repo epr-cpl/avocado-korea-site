@@ -74,7 +74,7 @@
   }
   .mega-link:hover{ background:var(--blue-050); }
   .mega-link-icon{
-    width:120px; height:120px; flex-shrink:0;
+    width:60px; height:60px; flex-shrink:0;
     display:flex; align-items:center; justify-content:center;
   }
   .mega-link-icon svg{ width:100%; height:100%; }
@@ -558,9 +558,12 @@
               <a href="#epr" class="mega-link">
                 <span class="mega-link-icon">
                   <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="24" cy="24" r="18" fill="#EAF0FF"/>
-                    <circle cx="24" cy="24" r="15" fill="none" stroke="#2F55E8" stroke-width="4" stroke-dasharray="66 28" stroke-linecap="round" transform="rotate(-90 24 24)"/>
-                    <polygon points="24,6 30,12 21,13" fill="#2F55E8"/>
+                    <circle cx="24" cy="24" r="20" fill="#EAF0FF"/>
+                    <g fill="#2F55E8">
+                      <polygon points="24,7 31,16 26.5,16 26.5,23 21.5,23 21.5,16 17,16" transform="rotate(0 24 24)"/>
+                      <polygon points="24,7 31,16 26.5,16 26.5,23 21.5,23 21.5,16 17,16" transform="rotate(120 24 24)"/>
+                      <polygon points="24,7 31,16 26.5,16 26.5,23 21.5,23 21.5,16 17,16" transform="rotate(240 24 24)"/>
+                    </g>
                   </svg>
                 </span>
                 <span><strong>EPR</strong><span>포장재·전자제품·배터리 등록</span></span>
