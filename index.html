@@ -62,6 +62,15 @@
     overflow:hidden;
   }
   .nav-item:hover .dropdown-menu{ opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+  .simple-dropdown{
+    position:absolute; top:130%; left:50%; transform:translateX(-50%) translateY(-6px);
+    background:#fff; border:1px solid var(--gray-300); border-radius:10px;
+    box-shadow:0 14px 30px rgba(20,27,51,0.14); padding:8px; min-width:180px;
+    opacity:0; pointer-events:none; transition:opacity .15s ease, transform .15s ease;
+  }
+  .nav-item:hover .simple-dropdown{ opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+  .simple-dropdown a{ display:block; padding:8px 12px; border-radius:6px; font-size:14px; white-space:nowrap; color:var(--ink); }
+  .simple-dropdown a:hover{ background:var(--blue-050); color:var(--blue-600); }
   .mega-body{ display:flex; }
   .mega-left{ flex:1.3; padding:20px 10px; }
   .mega-eyebrow{
@@ -537,7 +546,7 @@
     <nav class="links">
       <a href="#about">회사소개</a>
       <div class="nav-item">
-        <a href="#services">EU 컴플라이언스 ▾</a>
+        <a href="#services">EU Compliance ▾</a>
         <div class="dropdown-menu">
           <div class="mega-body">
             <div class="mega-left">
@@ -606,9 +615,17 @@
           </div>
         </div>
       </div>
-      <a href="#logistics">물류</a>
-      <a href="#scaleup">마켓플레이스</a>
-      <a href="#faq">FAQ</a>
+      <a href="#logistics">Logistics</a>
+      <a href="#scaleup">Marketplace</a>
+      <div class="nav-item">
+        <a href="#faq">Resource ▾</a>
+        <div class="simple-dropdown">
+          <a href="#faq">FAQ</a>
+          <a href="#consult">Contact Us</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="https://avocadocom-eu.stibee.com/" target="_blank" rel="noopener">Newsletter / Blog</a>
+        </div>
+      </div>
     </nav>
     <div class="nav-cta">
       <a href="https://avocadocom.eu/" id="lang-btn" class="lang-btn" target="_blank" rel="noopener" aria-label="영문 페이지로 보기">EN</a>
@@ -625,14 +642,18 @@
       <button class="mobile-panel-close" id="mobile-panel-close" aria-label="메뉴 닫기">×</button>
     </div>
     <a href="#about">회사소개</a>
-    <a href="#services">EU 컴플라이언스</a>
+    <a href="#services">EU Compliance</a>
     <a href="#vat" class="sub-link">VAT</a>
     <a href="#epr" class="sub-link">EPR</a>
     <a href="#cpnp" class="sub-link">CPNP/SCPN</a>
     <a href="#gpsr" class="sub-link">GPSR</a>
-    <a href="#logistics">물류</a>
-    <a href="#scaleup">마켓플레이스</a>
-    <a href="#faq">FAQ</a>
+    <a href="#logistics">Logistics</a>
+    <a href="#scaleup">Marketplace</a>
+    <a href="#faq">Resource</a>
+    <a href="#faq" class="sub-link">FAQ</a>
+    <a href="#consult" class="sub-link">Contact Us</a>
+    <a href="#testimonials" class="sub-link">Reviews</a>
+    <a href="https://avocadocom-eu.stibee.com/" target="_blank" rel="noopener" class="sub-link">Newsletter / Blog</a>
   </div>
 
 </div>
@@ -1720,7 +1741,7 @@
             <span>Dunckerstr 83, 10437 Berlin</span>
           </div>
           <div style="display:flex; gap:8px;">
-            <span style="flex-shrink:0; font-weight:600; color:#fff; min-width:52px;">창고</span>
+            <span style="flex-shrink:0; font-weight:600; color:#fff; min-width:52px;">W/H</span>
             <span>Alexander-meißner str 77B, 12526 Berlin</span>
           </div>
         </div>
@@ -1753,8 +1774,8 @@
           <a href="#epr">EPR</a>
           <a href="#cpnp">CPNP/SCPN</a>
           <a href="#gpsr">GPSR</a>
-          <a href="#logistics">물류</a>
-          <a href="#scaleup">마켓플레이스</a>
+          <a href="#logistics">LOGISTICS</a>
+          <a href="#scaleup">MARKETPLACE</a>
         </div>
       </div>
     </div>
